@@ -1,0 +1,23 @@
+#include <stdio.h>
+int isPrime(int number)
+{
+    int i;
+    for (i = 2; i <= number / 2; i++) {
+     if (number % i == 0) {
+            return 0;
+        }
+    }
+   return 1;
+}
+  int main()
+{
+    int num1 = 2, num2 = 10;
+    printf("The prime numbers between %d to %d are: ", num1, num2);
+    while (num1 <= num2) {
+    if (isPrime(num1)) {
+     printf("%d, ", num1);
+        }
+     num1++;
+    }
+  return 0;
+}
