@@ -1,0 +1,8 @@
+#include <string.h>
+main (){
+   char a[30] = “Hello”;
+   int l;
+   l = strlen (a);
+   printf (“length of the string = %d”, l);
+   getch ();
+}
