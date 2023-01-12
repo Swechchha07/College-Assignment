@@ -1,0 +1,9 @@
+#include <string.h>
+main(){
+   char a[50] = "Hello";
+   char b[20] = "Good Morning";
+   clrscr ();
+   strcat (a,b);
+   printf("concatenated string = %s", a);
+   getch ();
+}
