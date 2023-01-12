@@ -1,0 +1,47 @@
+#include <stdio.h>
+long factorial(long n)
+{
+    long i, fact = 1;
+    for (i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+ long isStrong(long n)
+{
+    long sum = 0;
+    long i = n;
+    while (i != 0)
+    {
+        sum = sum + factorial(i % 10);
+        i = i / 10;
+    }
+    if (sum == n)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+ void printStrong(long n)
+{
+    long i;
+    for (i = 1; i <= n; i++)
+    {
+        if (isStrong(i) == 1)
+        {
+            printf("%ld\n", i);
+        }
+    }
+}
+ int main(void)
+{
+    long n;
+    printf("Enter the number: ");
+    scanf("%ld", &n);
+    printf("Strong Numbers are: ");
+    printStrong(n);
+}
