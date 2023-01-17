@@ -1,0 +1,18 @@
+#include<stdio.h> 
+void copystr(char*,char*); 
+void main() 
+{ 
+             char*str1="I am a btech student"; 
+             char str2[30]; 
+             clrscr(); 
+             copystr(str2,str1); 
+             printf("\n %s",str2); 
+             getch();
+ } 
+            void copystr(char *dest,char *src) 
+       { 
+                while(*src!='\0') 
+                *dest++=*src++; 
+                *dest='\0'; 
+                return; 
+       }
